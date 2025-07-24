@@ -19,16 +19,25 @@ const product = multiply(difference, 5);
 const quotient = divide(product, 9);
 console.log("The Temperature is", quotient, "degrees celsius");
 
-let describeTemperature = quotient;
-
-if (describeTemperature < 0) {
-  console.log("Very cold");
-} else if (describeTemperature < 20) {
-  console.log("Cold");
-} else if (describeTemperature < 30) {
-  console.log("Warm");
-} else if (describeTemperature < 40) {
-  console.log("Hot");
-} else if (describeTemperature >= 40) {
-  console.log("Very hot");
+if (quotient < 0) {
+  ("Very cold");
+} else if (quotient < 20) {
+  describeTemperature = "Cold";
+} else if (quotient < 30) {
+  describeTemperature = "Warm";
+} else if (quotient < 40) {
+  describeTemperature = "Hot";
+} else if (quotient >= 40) {
+  describeTemperature = "Very hot";
 }
+
+alert(
+  "The Temperature in Degrees Celsius is" +
+    " " +
+    quotient +
+    ", " +
+    "it is" +
+    " " +
+    describeTemperature +
+    "."
+);
